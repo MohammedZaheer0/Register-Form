@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Libre+Baskerville&family=Nanum+Myeongjo:wght@700&family=Noto+Serif+Display:wght@600&family=Noto+Serif:ital,wght@0,100;0,300;0,400;1,300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Register Page </title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 450px 450px;
+            grid-template-rows: 1fr;
+            height: 100vh;
+            width: 100vw;
+            background-color: orange;
+            justify-content: center;
+            align-items: center;
+        }
+        .firstdiv{
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            width: 430px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .firstdiv img{
+            border-radius: 50%;
+            height: 130px;
+            width: 130px;
+            transform: rotate(135deg);
+            margin-bottom: 20px;
+        }
+        .firstdiv h2,p{
+            margin-bottom: 25px;
+        }
+        .firstdiv h2{
+            font-size: 40px;
+        }
+        .firstdiv p{
+            font-size: 20px;
+        }
+        .btnfirst{
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .btnfirst:hover{
+            color: white;
+            background-color: black;
+        }
+        .seconddiv{
+            background-color: white;
+            height:500px;
+            width: 430px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 20% 0% 0% 20%;
+        }
+        .seconddiv h1{
+            margin-bottom: 10px;
+            color: gray;
+            font-size: 40px;
+        }
+        .seconddiv form{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+        form input{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 10px;
+            border: 1px solid gray;
+        }
+        .seconddiv form .btn{
+            padding: 10px 18px;
+            width: 100px;
+            border-radius: 20px;
+            background-color: orange;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+        .seconddiv form .btn:hover{
+            color: white;
+            background-color: rgb(5, 156, 161);
+        }
+
+        
+
+        @media only screen and (max-width: 320px) {
+            .container{
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr 1fr;
+            height: 100%;
+            width: 100%;
+        }
+        .firstdiv{
+            display: flex;
+            flex-direction: column;
+            height: 250px;
+            width: 210px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+        .firstdiv img{
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+            transform: rotate(135deg);
+        }
+        .firstdiv h2,p{
+            margin-bottom: 20px;
+        }
+        .firstdiv p{
+            font-size: 12px;
+        }
+        .btnfirst{
+            padding: 8px 15px;
+        }
+        .seconddiv{
+            height:350px;
+            width: 210px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            border-radius:20px;
+            margin-bottom: 10px;
+        }
+        .seconddiv h1{
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        form input{
+            padding: 5px;
+            border-radius: 6px;
+            margin: 10px;
+        }
+        .seconddiv form .btn{
+            padding: 6px 15px;
+            margin:0 auto;
+            font-size: 13px;
+        }
+        }
+
+
+
+        @media only screen and (min-width: 321px) and (max-width:480px) {
+            .container{
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr 1fr;
+            height: 100%;
+            width: 100%;
+        }
+        .firstdiv{
+            display: flex;
+            flex-direction: column;
+            height: 350px;
+            width: 280px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+        .firstdiv img{
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            transform: rotate(135deg);
+        }
+        .firstdiv h2{
+            font-size: 20px;
+        }
+        .firstdiv h2,p{
+            margin-bottom: 20px;
+        }
+        .firstdiv p{
+            font-size: 15px;
+        }
+        .btnfirst{
+            padding: 10px 18px;
+            font-size: 13px;
+        }
+        .seconddiv{
+            height:400px;
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            border-radius:20px;
+            margin-bottom: 10px;
+        }
+        .seconddiv h1{
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        form input{
+            padding: 10px;
+            border-radius: 6px;
+            margin: 12px;
+        }
+        .seconddiv form .btn{
+            padding: 8px 15px;
+            margin:0 auto;
+            font-size: 13px;
+        }
+        }
+
+
+        @media only screen and (min-width: 481px) and (max-width:768px) {
+            .container{
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr 1fr;
+            height: 100%;
+            width: 100%;
+        }
+        .firstdiv{
+            display: flex;
+            flex-direction: column;
+            height: 350px;
+            width: 450px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+        .firstdiv img{
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            transform: rotate(135deg);
+        }
+        .firstdiv h2{
+            font-size: 30px;
+        }
+        .firstdiv h2,p{
+            margin-bottom: 20px;
+        }
+        .firstdiv p{
+            font-size: 18px;
+        }
+        .btnfirst{
+            padding: 12px 18px;
+            font-size: 15px;
+        }
+        .seconddiv{
+            height:400px;
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            border-radius:20px;
+            margin-bottom: 10px;
+        }
+        .seconddiv h1{
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        form input{
+            padding: 10px;
+            border-radius: 6px;
+            margin: 12px;
+        }
+        .seconddiv form .btn{
+            padding: 10px 15px;
+            margin:0 auto;
+            font-size: 15px;
+        }
+        }
+
+
+        @media only screen and (min-width: 769px) and (max-width:1024px) {
+            .container{
+            display: grid;
+            grid-template-columns: 380px 380px;
+            grid-template-rows: 550px ;
+            height: 100%;
+            width: 100%;
+        }
+        .firstdiv{
+            display: flex;
+            flex-direction: column;
+            float: right;
+            height: 400px;
+            width: 370px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .firstdiv img{
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            transform: rotate(135deg);
+        }
+        .firstdiv h2{
+            font-size: 38px;
+        }
+        .firstdiv h2,p{
+            margin-bottom: 20px;
+        }
+        .firstdiv p{
+            font-size: 20px;
+        }
+        .btnfirst{
+            padding: 12px 18px;
+            font-size: 16px;
+        }
+        .seconddiv{
+            height:400px;
+            width: 370px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            border-radius:20px;
+            margin-bottom: 10px;
+            border-radius: 20% 0% 0% 20%;
+        }
+        .seconddiv h1{
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        form input{
+            padding: 10px;
+            border-radius: 6px;
+            margin: 12px;
+        }
+        .seconddiv form .btn{
+            padding: 10px 15px;
+            margin:0 auto;
+            font-size: 18px;
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="firstdiv">
+            <img src="216279_location_arrow_icon.png" alt="">
+            <h2>Join Us</h2>
+            <p>Subscribe Easy  Tutorials YouTube Channel To Watch More Videos</p>
+            <button class="btnfirst">About Us</button>
+        </div>
+
+
+        <div class="seconddiv">
+            <h1>Register Here</h1>
+            <form action="">
+                <input type="text" id="Fullname" placeholder="Enter Full Name" required autocomplete="off">
+                <input type="email" id="Email" placeholder="Enter Email" required autocomplete="off">
+                <input type="password" id="Password" placeholder="Enter Password" required autocomplete="off">
+                <input type="phone" id="Cell" placeholder="Enter Cell" required autocomplete="off">
+
+                <button class="btn">Register</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
